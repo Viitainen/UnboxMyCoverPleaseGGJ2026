@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements" xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd">
+    <editor:Toolbar class="sw-toolbar">
+        <editor:ToolbarSearchField name="sw-toolbar__filter" class="sw-toolbar__filter" />
+        <editor:ToolbarButton name="sw-toolbar__create-btn" class="sw-toolbar__create-btn" tooltip="Create a new scene" text="Create" />
+        <editor:ToolbarToggle name="sw-toolbar__editmode-toggle" class="sw-toolbar__editmode-toggle" text="Edit Mode" tooltip="Rename scenes, delete scenes, sort favorites" />
+        <editor:ToolbarButton name="sw-toolbar__refresh-btn" class="sw-toolbar__refresh-btn" tooltip="Force refresh" text="Refresh" />
+    </editor:Toolbar>
+    <ScrollView class="scene-containers" view-data-key="scenes-scrollview">
+
+        <Box class="box-container box-container--favorites">
+            <Foldout text="Favorites" view-data-key="foldout-favorites" class="foldout foldout--favorites">
+                <VisualElement name="favorite-scenes" class="favorite-scenes scene-rows-container">
+
+                </VisualElement>
+            </Foldout>
+        </Box>
+        <Box class="box-container box-container--build-scenes">
+            <Foldout text="Scenes in Build" view-data-key="foldout-build-scenes" class="foldout foldout--build-scenes">
+                <VisualElement name="build-scenes" class="scene-rows-container">
+
+                </VisualElement>
+            </Foldout>
+        </Box>
+        <Box class="box-container box-container--all-scenes">
+            <Foldout text="All Scenes" view-data-key="foldout-all-scenes" class="foldout foldout--all-scenes">
+                <VisualElement name="all-scenes" class="scene-rows-container">
+
+                </VisualElement>
+            </Foldout>
+        </Box>
+    </ScrollView>
+</UXML>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <VisualElement name="scene-row" class="scene-row">
+        <Button name="favorite-scene-btn" class="scene-row-favorite-btn">
+            <VisualElement class="scene-row-favorite-btn-icon" name="scene-row-favorite-btn-icon"></VisualElement>
+        </Button>
+        <Button name="load-scene-btn" class="scene-row-load-btn hide-edit"></Button>
+        <TextField name="scene-rename-textfield" class="scene-rename-textfield hide-normal" tooltip="Rename scene"></TextField>
+        <editor:Toolbar name="scene-row-toolbar" class="scene-row-toolbar hide-normal">
+            <editor:ToolbarButton name="favorite-up" class="favorite-up only-favorites" text="↑" tooltip="Move up"></editor:ToolbarButton>
+            <editor:ToolbarButton name="favorite-down" class="favorite-down only-favorites" text="↓" tooltip="Move down"></editor:ToolbarButton>
+            <editor:ToolbarButton name="remove-scene" class="remove-scene" tooltip="Remove scene asset">
+                <VisualElement name="remove-scene__icon" class="remove-scene__icon"></VisualElement>
+            </editor:ToolbarButton>
+        </editor:Toolbar>
+    </VisualElement>
+</UXML>
