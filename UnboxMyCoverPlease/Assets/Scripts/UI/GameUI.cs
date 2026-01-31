@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private TMP_Text characterNumberText;
 
+    [SerializeField]
+    private Button readyButton;
+
     private void Awake()
     {
         if (gameFlow)
@@ -26,6 +30,16 @@ public class GameUI : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        readyButton.onClick.AddListener(OnReadyButtonClicked);
+    }
+
+    private void OnReadyButtonClicked()
+    {
+        gameFlow.AdvanceToNextCharacter(out _);
+    }
+
     private void OnCharacterDone(CharacterDone characterDone)
     {
         leftSideUI.ClearCharacter();
@@ -33,7 +47,7 @@ public class GameUI : MonoBehaviour
 
     private void OnCharacterChanged(CharacterData characterData)
     {
-        UpdateCharacterNumber(gameFlow.currentCharacterIndex + 1, gameFlow.CharacterCount);
+        UpdateCharacterNumber(gameFlow.CurrentCharacterIndex + 1, gameFlow.CharacterCount);
 
         leftSideUI.ShowCharacter(characterData);
     }

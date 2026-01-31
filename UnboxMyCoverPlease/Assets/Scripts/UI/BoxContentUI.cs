@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,22 +7,43 @@ public abstract class BoxContentUI : MonoBehaviour
     [SerializeField]
     private List<CoverOptionUI> coverOptionUIs;
 
+    public Action<CoverOptionUI, CoverOptionData> OnOptionSelected;
+
+
+    public void Start()
+    {
+        AddOptionSelectedListeners();
+    }
+
+    private void AddOptionSelectedListeners()
+    {
+        foreach (CoverOptionUI option in coverOptionUIs)
+        {
+            option.OnOptionSelected += OnOptionSelectedHandler;
+        }
+    }
+
+    private void OnOptionSelectedHandler(CoverOptionUI coverOptionUI, CoverOptionData coverOptionData)
+    {
+        OnOptionSelected?.Invoke(coverOptionUI, coverOptionData);
+    }
+
     public void RemoveCoverOption(CoverOptionData coverOptionDataToRemove)
     {
-        foreach(CoverOptionUI coverOptionUI in coverOptionUIs)
+        foreach (CoverOptionUI coverOptionUI in coverOptionUIs)
         {
             if (coverOptionUI.CoverOptionData == coverOptionDataToRemove)
             {
-                coverOptionUI.ToggleVisibility(false, true);
+                coverOptionUI.ToggleUsable(false, true);
             }
         }
     }
 
     public void ToggleAll(bool isVisible, bool animate)
     {
-        foreach(CoverOptionUI coverOptionUI in coverOptionUIs)
+        foreach (CoverOptionUI coverOptionUI in coverOptionUIs)
         {
-            coverOptionUI.ToggleVisibility(isVisible, animate);
+            coverOptionUI.ToggleUsable(isVisible, animate);
         }
     }
 }

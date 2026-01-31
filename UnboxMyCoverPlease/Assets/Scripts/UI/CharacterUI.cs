@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterUI : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameFlow gameFlow;
+
     [SerializeField]
     private Image baseImage;
 
@@ -10,7 +15,24 @@ public class CharacterUI : MonoBehaviour
     private Image headwearImage;
 
     [SerializeField]
-    private Image toolImage;
+    private Image itemImage;
+
+    private void Start()
+    {
+        gameFlow.OnCurrentHeadwearOptionChanged += OnCurrentHeadwearChanged;
+        gameFlow.OnCurrentItemOptionChanged += OnCurrentItemChanged;
+        // gameFlow.OnCurrentHeadwearOptionChanged += OnCurrentHeadwearChanged;
+    }
+
+    private void OnCurrentHeadwearChanged(CoverOptionData data)
+    {
+        ChangeHeadwearImage(data ? data.optionAvatarImage : null);
+    }
+
+    private void OnCurrentItemChanged(CoverOptionData data)
+    {
+        ChangeImageImage(data ? data.optionAvatarImage : null);
+    }
 
     public void ChangeBaseImage(Sprite newSprite)
     {
@@ -22,9 +44,9 @@ public class CharacterUI : MonoBehaviour
         headwearImage.sprite = newSprite;
     }
 
-    public void ChangeToolImage(Sprite newSprite)
+    public void ChangeImageImage(Sprite newSprite)
     {
-        toolImage.sprite = newSprite;
+        itemImage.sprite = newSprite;
     }
 
 }

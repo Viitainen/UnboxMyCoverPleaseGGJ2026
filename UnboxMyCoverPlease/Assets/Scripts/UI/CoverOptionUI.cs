@@ -1,12 +1,20 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoverOptionUI : MonoBehaviour
 {
     [SerializeField]
-    private CoverOptionData coverOptionData;
+    protected CoverOptionData coverOptionData;
 
     [SerializeField]
-    private GameObject optionParent;
+    protected GameObject optionParent;
+
+    [SerializeField]
+    private Button optionButton;
+
+    public Action<CoverOptionUI, CoverOptionData> OnOptionSelected;
 
     public CoverOptionData CoverOptionData
     {
@@ -16,8 +24,23 @@ public class CoverOptionUI : MonoBehaviour
         }
     }
 
-    public void ToggleVisibility(bool isVisible, bool animate)
+    public void Start()
     {
-        optionParent.SetActive(isVisible);
+        optionButton.onClick.AddListener(OnButtonClicked);
+    }
+
+    private void OnButtonClicked()
+    {
+        OnOptionSelected?.Invoke(this, coverOptionData);
+    }
+
+    public virtual void ToggleUsable(bool isUsable, bool animate)
+    {
+        optionButton.interactable = isUsable;
+    }
+
+    public virtual void UpdateUI()
+    {
+        
     }
 }

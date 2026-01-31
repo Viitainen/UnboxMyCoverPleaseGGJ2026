@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class GameFlow : MonoBehaviour
 {
-    public int currentCharacterIndex = -1;
-
-    public CharacterData currentCharacter;
-
     public List<CharacterData> characters;
 
     public Action<CharacterData> OnCharacterChanged;
 
     public Action<CharacterDone> OnCharacterDone;
 
+    private int currentCharacterIndex = -1;
+
+    private CharacterData currentCharacter;
+
     public int CharacterCount { get { return characters.Count; } }
+
+    public int CurrentCharacterIndex { get { return currentCharacterIndex; } }
+
+    public CharacterData CurrentCharacter { get { return currentCharacter; } }
+
+
+    public Action<CoverOptionData> OnCurrentHeadwearOptionChanged;
+    public Action<CoverOptionData> OnCurrentItemOptionChanged;
+    public Action<CoverOptionData> OnCurrentInstructionOptionChanged;
 
 
     private CoverOptionData currentHeadwearOption;
@@ -35,8 +44,32 @@ public class GameFlow : MonoBehaviour
         AdvanceToNextCharacter(out _);
     }
 
+    public void ChangeHeadwearOption(CoverOptionData coverOption)
+    {
+        currentHeadwearOption = coverOption;
+        OnCurrentHeadwearOptionChanged?.Invoke(currentHeadwearOption);
+    }
+
+    public void ChangeItemOption(CoverOptionData coverOption)
+    {
+        currentItemOption = coverOption;
+        OnCurrentItemOptionChanged?.Invoke(currentItemOption);
+    }
+
+    public void ChangeInstructionOption(CoverOptionData coverOption)
+    {
+        currentInstructionOption = coverOption;
+        OnCurrentInstructionOptionChanged?.Invoke(currentInstructionOption);
+    }
+
     public CharacterData AdvanceToNextCharacter(out bool hadCharacter)
     {
+        if (!currentCharacter || !currentHeadwearOption || !currentItemOption || !currentInstructionOption)
+        {
+            hadCharacter = false;
+            return null;
+        }
+
         SaveCurrentCharacterAsDone();
 
         currentHeadwearOption = null;
