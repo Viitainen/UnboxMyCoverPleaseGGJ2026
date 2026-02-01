@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_SizeDelta: {x: -40, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5346735653057417645
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: bf92634f18a4ba142be1dd19480f0a35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -136,14 +136,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7cc98dc054e3e4843bccaaeab3c02776, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a79e4917db9490b4bbaea7a02e4eb941, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -214,5 +214,5 @@ MonoBehaviour:
   optionButton: {fileID: 7834637513997492208}
   iconImage: {fileID: 3790254396550774140}
   borderImage: {fileID: 3296728995157910649}
-  normalBorderSprite: {fileID: 21300000, guid: 7cc98dc054e3e4843bccaaeab3c02776, type: 3}
-  selectedBorderSprite: {fileID: 21300000, guid: 69ba196329ab02e4d9579dc3caae76b5, type: 3}
+  normalBorderSprite: {fileID: 21300000, guid: a79e4917db9490b4bbaea7a02e4eb941, type: 3}
+  selectedBorderSprite: {fileID: 21300000, guid: 4c3ab1bd47d27d346bfaa5ce2661f936, type: 3}

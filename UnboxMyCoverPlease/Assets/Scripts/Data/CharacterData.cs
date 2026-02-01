@@ -21,6 +21,8 @@ public class CharacterData : ExpandableScriptableObject
 
     public List<CoverOptionImpact> coverOptionImpacts;
 
+    public AudioClip introductionAudio;
+
 
     public CoverOptionsResults GetCoverOptionsResults(List<CoverOptionData> selectedCoverOptions)
     {

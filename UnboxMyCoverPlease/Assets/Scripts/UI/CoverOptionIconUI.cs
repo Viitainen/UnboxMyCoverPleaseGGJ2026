@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,6 +18,9 @@ public class CoverOptionIconUI : CoverOptionUI, IPointerEnterHandler, IPointerEx
     [SerializeField]
     private Sprite selectedBorderSprite;
 
+    [SerializeField]
+    private TMP_Text guideText;
+
     public override void ToggleSelected(bool isSelected)
     {
         borderImage.sprite = isSelected ? selectedBorderSprite : normalBorderSprite;
@@ -30,9 +34,11 @@ public class CoverOptionIconUI : CoverOptionUI, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        guideText.text = coverOptionData.description;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        guideText.text = "";
     }
 }

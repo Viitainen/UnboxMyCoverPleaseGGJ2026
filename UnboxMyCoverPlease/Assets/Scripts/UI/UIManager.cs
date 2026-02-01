@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
 
     private void OnAllResultsDone()
     {
-
+        StartCoroutine(EndOfEndResultsSequence());
     }
 
     private IEnumerator EndResultsSequence()

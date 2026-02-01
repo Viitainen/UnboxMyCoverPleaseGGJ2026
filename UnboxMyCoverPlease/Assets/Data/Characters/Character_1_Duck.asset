@@ -20,7 +20,7 @@ MonoBehaviour:
   failDialog: "I am a superhero\u2026 but my identity is no secret. People follow
     me and demand more from me\u2026 why am I even trying?"
   baseImage: {fileID: 21300000, guid: 6f439507aaaa1b246908b0d037b2c8be, type: 3}
-  impactSuccessThreshold: 5
+  impactSuccessThreshold: 4
   coverOptionImpacts:
   - coverOption: {fileID: 11400000, guid: 151891b031a68d54da2d310505d01c45, type: 2}
     impactAmount: 2
@@ -34,3 +34,4 @@ MonoBehaviour:
     impactAmount: 2
   - coverOption: {fileID: 11400000, guid: 6bf3fb165f1239e4099bfedbe29c754c, type: 2}
     impactAmount: 1
+  introductionAudio: {fileID: 8300000, guid: 1e856d072acf1b84382c96766a1f2ac0, type: 3}

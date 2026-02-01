@@ -9,6 +9,9 @@ public class CharacterUI : MonoBehaviour
     private GameFlow gameFlow;
 
     [SerializeField]
+    private AudioManager audioManager;
+
+    [SerializeField]
     private Image baseImage;
 
     [SerializeField]
@@ -33,6 +36,11 @@ public class CharacterUI : MonoBehaviour
     private void OnCharacterChanged(CharacterData data)
     {
         ChangeBaseImage(data ? data.baseImage : null);
+        
+        if (audioManager && data && data.introductionAudio)
+        {
+            audioManager.PlayEffect(data.introductionAudio);
+        }
     }
 
     private void OnDisable()

@@ -20,7 +20,7 @@ MonoBehaviour:
   failDialog: "They saw right through my disguise and called my parents. I\u2019m
     filled with shame. All my friends know that I failed."
   baseImage: {fileID: 21300000, guid: 802d3ba2a90693747830872cdc6a086b, type: 3}
-  impactSuccessThreshold: 5
+  impactSuccessThreshold: 4
   coverOptionImpacts:
   - coverOption: {fileID: 11400000, guid: 4f4a005361579784abc702d742d65e65, type: 2}
     impactAmount: 2
@@ -34,3 +34,4 @@ MonoBehaviour:
     impactAmount: 2
   - coverOption: {fileID: 11400000, guid: a06891e291d265e43892379e9788db4a, type: 2}
     impactAmount: 1
+  introductionAudio: {fileID: 8300000, guid: a2edccbd8a00d624b82c8da1e28c4d71, type: 3}

@@ -16,13 +16,14 @@ public class CharacterResultsUI : MonoBehaviour
     private void OnEnable()
     {
         gameFlow.OnCharacterResultChanged += OnCharacterResultChanged;
+        gameFlow.OnAllResultsDone += OnAllResultsDone;
         nextResultButton.onClick.AddListener(OnNextResultButtonClicked);
     }
-
 
     private void OnDisable()
     {
         gameFlow.OnCharacterResultChanged -= OnCharacterResultChanged;
+        gameFlow.OnAllResultsDone -= OnAllResultsDone;
         nextResultButton.onClick.RemoveListener(OnNextResultButtonClicked);
     }
 
@@ -30,6 +31,11 @@ public class CharacterResultsUI : MonoBehaviour
     private void OnNextResultButtonClicked()
     {
         gameFlow.AdvanceToNextResult(out _);
+    }
+
+    private void OnAllResultsDone()
+    {
+        nextResultButton.gameObject.SetActive(false);
     }
 
     private void OnCharacterResultChanged(CharacterDone characterDone)

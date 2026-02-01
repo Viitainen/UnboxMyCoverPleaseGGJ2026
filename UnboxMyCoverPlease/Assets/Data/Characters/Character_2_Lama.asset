@@ -20,7 +20,7 @@ MonoBehaviour:
   failDialog: "The steps\u2026 they follow me everywhere\u2026 I fear for my life.
     Nothing helps. No one helps\u2026. I must disappear\u2026 Goodbye. Forever."
   baseImage: {fileID: 21300000, guid: dba530b6accefc24fb4484c27ef6c001, type: 3}
-  impactSuccessThreshold: 5
+  impactSuccessThreshold: 4
   coverOptionImpacts:
   - coverOption: {fileID: 11400000, guid: 72f9b1fa192b49649b25544eced87556, type: 2}
     impactAmount: 2
@@ -34,3 +34,4 @@ MonoBehaviour:
     impactAmount: 2
   - coverOption: {fileID: 11400000, guid: b1df0c61b8eaf0a44865fdf54b3045ae, type: 2}
     impactAmount: 1
+  introductionAudio: {fileID: 8300000, guid: 41695eb23142caa42a43610ebcabcc16, type: 3}

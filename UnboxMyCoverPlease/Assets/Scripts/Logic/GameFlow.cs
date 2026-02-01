@@ -1,9 +1,15 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class GameFlow : MonoBehaviour
 {
+
+    [SerializeField]
+    private AudioManager audioManager;
+
+
     public List<CharacterData> characters;
 
     public Action<CharacterData> OnCharacterChanged;
@@ -84,15 +90,17 @@ public class GameFlow : MonoBehaviour
 
         SaveCurrentCharacterAsDone();
 
-        ChangeHeadwearOption(null);
-        ChangeItemOption(null);
-        ChangeInstructionOption(null);
+
 
         currentCharacterIndex++;
         hadCharacter = currentCharacterIndex < characters.Count;
 
         if (hadCharacter)
         {
+            ChangeHeadwearOption(null);
+            ChangeItemOption(null);
+            ChangeInstructionOption(null);
+
             // IS OK
             currentCharacter = characters[currentCharacterIndex];
         }
@@ -120,15 +128,15 @@ public class GameFlow : MonoBehaviour
             ChangeHeadwearOption(characterDone.headwearSelection);
             ChangeItemOption(characterDone.itemSelection);
             ChangeInstructionOption(characterDone.instructionSelection);
+
+            OnCharacterResultChanged?.Invoke(currentCharacterResult);
+            OnCharacterChanged?.Invoke(currentCharacter);
         }
         else
         {
             // All results done
             OnAllResultsDone?.Invoke();
         }
-
-        OnCharacterResultChanged?.Invoke(currentCharacterResult);
-        OnCharacterChanged?.Invoke(currentCharacter);
     }
 
     private bool SaveCurrentCharacterAsDone()
@@ -155,12 +163,22 @@ public class GameFlow : MonoBehaviour
         return false;
     }
 
+
     private void InitiateResults()
     {
         // currentCharacter = null;
         // Go to end results?
         currentCharacterIndex = -1;
         OnAllCharactersDone?.Invoke();
-        AdvanceToNextResult(out _);
+
+        if (audioManager)
+        {
+            audioManager.ChangeMusicToResults(1.5f);
+        }
+
+        DOVirtual.DelayedCall(1.04f, () =>
+        {
+            AdvanceToNextResult(out _);
+        });
     }
 }

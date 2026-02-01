@@ -21,12 +21,21 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     private Button readyButton;
 
-    private void Awake()
+    private void OnEnable()
     {
         if (gameFlow)
         {
             gameFlow.OnCharacterChanged += OnCharacterChanged;
             gameFlow.OnCharacterDone += OnCharacterDone;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (gameFlow)
+        {
+            gameFlow.OnCharacterChanged -= OnCharacterChanged;
+            gameFlow.OnCharacterDone -= OnCharacterDone;
         }
     }
 

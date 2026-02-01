@@ -19,7 +19,7 @@ MonoBehaviour:
   failDialog: "Living in jail is not what I wanted. I blame you. I will come and
     find you when I break out of here \u2014 and you will pay!"
   baseImage: {fileID: 21300000, guid: 46f331f89d283884fad236ec4a71f822, type: 3}
-  impactSuccessThreshold: 5
+  impactSuccessThreshold: 4
   coverOptionImpacts:
   - coverOption: {fileID: 11400000, guid: f0c874042a05ead41b3de59c49ecedfe, type: 2}
     impactAmount: 2
@@ -33,3 +33,4 @@ MonoBehaviour:
     impactAmount: 2
   - coverOption: {fileID: 11400000, guid: 253c5e04a1642434286a70b10bd64401, type: 2}
     impactAmount: 1
+  introductionAudio: {fileID: 8300000, guid: d82bee01df409874eba0b2c01762aae7, type: 3}
