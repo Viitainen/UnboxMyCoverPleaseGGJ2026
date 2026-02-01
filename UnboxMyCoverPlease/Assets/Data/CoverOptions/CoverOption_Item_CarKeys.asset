@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoverOptionData
   optionName: Car keys
   description: Drive a car or stab someone maybe?
-  optionIcon: {fileID: 0}
+  optionIcon: {fileID: 21300000, guid: bfc0a4cb0225b814cac3b0d29349f2bd, type: 3}
   optionAvatarImage: {fileID: 21300000, guid: bdc02861dd357ca41a78de7b7b1a2106, type: 3}

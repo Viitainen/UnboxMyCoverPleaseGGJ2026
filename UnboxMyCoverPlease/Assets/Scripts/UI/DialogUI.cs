@@ -16,7 +16,7 @@ public class DialogUI : MonoBehaviour
 
         if (typewriterEffect)
         {
-            typewriterEffect.StartTypewriterEffect();
+            typewriterEffect.StartTypewriterEffect(0.5f);
         }
     }
 

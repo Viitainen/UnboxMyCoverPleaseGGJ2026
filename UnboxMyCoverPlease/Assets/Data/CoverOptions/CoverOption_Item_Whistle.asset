@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoverOptionData
   optionName: Whistle
   description: Whistle for help
-  optionIcon: {fileID: 0}
+  optionIcon: {fileID: 21300000, guid: 78a19f4dbf335994483dc71548672993, type: 3}
   optionAvatarImage: {fileID: 21300000, guid: 0fcbb7f90e5d519418c5b8010c8a1a74, type: 3}

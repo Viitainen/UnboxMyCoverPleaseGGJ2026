@@ -10,11 +10,18 @@ public class GameFlow : MonoBehaviour
 
     public Action<CharacterDone> OnCharacterDone;
 
+    public Action<CharacterDone> OnCharacterResultChanged;
+
     public Action OnAllCharactersDone;
+
+    public Action OnAllResultsDone;
+
 
     private int currentCharacterIndex = -1;
 
     private CharacterData currentCharacter;
+
+    private CharacterDone currentCharacterResult;
 
     public int CharacterCount { get { return characters.Count; } }
 
@@ -91,18 +98,42 @@ public class GameFlow : MonoBehaviour
         }
         else
         {
-            currentCharacter = null;
-            // Go to end results?
-            OnAllCharactersDone?.Invoke();
+            InitiateResults();
         }
 
         OnCharacterChanged?.Invoke(currentCharacter);
         return currentCharacter;
     }
 
+    public void AdvanceToNextResult(out bool hadResult)
+    {
+        currentCharacterIndex++;
+        hadResult = currentCharacterIndex < characterDones.Count;
+
+        if (hadResult)
+        {
+            // IS OK
+            CharacterDone characterDone = characterDones[currentCharacterIndex];
+            currentCharacterResult = characterDone;
+            currentCharacter = characterDone.character;
+
+            ChangeHeadwearOption(characterDone.headwearSelection);
+            ChangeItemOption(characterDone.itemSelection);
+            ChangeInstructionOption(characterDone.instructionSelection);
+        }
+        else
+        {
+            // All results done
+            OnAllResultsDone?.Invoke();
+        }
+
+        OnCharacterResultChanged?.Invoke(currentCharacterResult);
+        OnCharacterChanged?.Invoke(currentCharacter);
+    }
+
     private bool SaveCurrentCharacterAsDone()
     {
-        if (currentCharacterIndex > -1)
+        if (currentCharacterIndex > -1 && currentCharacterIndex < CharacterCount)
         {
             CharacterDone characterDone = new CharacterDone();
 
@@ -122,5 +153,14 @@ public class GameFlow : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void InitiateResults()
+    {
+        // currentCharacter = null;
+        // Go to end results?
+        currentCharacterIndex = -1;
+        OnAllCharactersDone?.Invoke();
+        AdvanceToNextResult(out _);
     }
 }

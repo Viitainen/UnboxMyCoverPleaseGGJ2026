@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoverOptionData
   optionName: ID card
   description: Looks like a beliveable ID
-  optionIcon: {fileID: 0}
+  optionIcon: {fileID: 21300000, guid: ec7742d682d4f8442a8b4b947a829206, type: 3}
   optionAvatarImage: {fileID: 21300000, guid: 640ae6c1b44ef6a49bfc4e9e2377669b, type: 3}

@@ -20,15 +20,29 @@ public class CharacterUI : MonoBehaviour
     private void OnEnable()
     {
         CheckImagesEnabled();
-        gameFlow.OnCurrentHeadwearOptionChanged += OnCurrentHeadwearChanged;
-        gameFlow.OnCurrentItemOptionChanged += OnCurrentItemChanged;
-        // gameFlow.OnCurrentInstructionOptionChanged += OnCurrentInstructionChanged;
+        if (gameFlow)
+        {
+            gameFlow.OnCharacterChanged += OnCharacterChanged;
+            gameFlow.OnCurrentHeadwearOptionChanged += OnCurrentHeadwearChanged;
+            gameFlow.OnCurrentItemOptionChanged += OnCurrentItemChanged;
+            // gameFlow.OnCurrentInstructionOptionChanged += OnCurrentInstructionChanged;
+        }
+
+    }
+
+    private void OnCharacterChanged(CharacterData data)
+    {
+        ChangeBaseImage(data ? data.baseImage : null);
     }
 
     private void OnDisable()
     {
-        gameFlow.OnCurrentHeadwearOptionChanged -= OnCurrentHeadwearChanged;
-        gameFlow.OnCurrentItemOptionChanged -= OnCurrentItemChanged;
+        if (gameFlow)
+        {
+            gameFlow.OnCharacterChanged -= OnCharacterChanged;
+            gameFlow.OnCurrentHeadwearOptionChanged -= OnCurrentHeadwearChanged;
+            gameFlow.OnCurrentItemOptionChanged -= OnCurrentItemChanged;
+        }
     }
 
     private void OnCurrentHeadwearChanged(CoverOptionData data)
