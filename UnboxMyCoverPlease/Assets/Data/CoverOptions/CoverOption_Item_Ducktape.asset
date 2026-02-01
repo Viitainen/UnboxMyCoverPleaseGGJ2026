@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: Duct tape
   description: To cover mouth or tie down
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: d09e9ddf559b13144be321deee568abf, type: 3}

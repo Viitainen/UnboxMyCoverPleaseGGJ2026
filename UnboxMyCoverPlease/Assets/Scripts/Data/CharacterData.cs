@@ -9,9 +9,15 @@ public class CharacterData : ExpandableScriptableObject
     [TextArea()]
     public string problem;
 
+    [TextArea()]
+    public string successDialog;
+
+    [TextArea()]
+    public string failDialog;
+
     public Sprite baseImage;
 
-    public int impactSuccessThreshold = 5;
+    public int impactSuccessThreshold = 4;
 
     public List<CoverOptionImpact> coverOptionImpacts;
 

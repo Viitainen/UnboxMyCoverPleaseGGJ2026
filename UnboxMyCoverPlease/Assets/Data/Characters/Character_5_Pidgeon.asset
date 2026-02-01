@@ -15,6 +15,20 @@ MonoBehaviour:
   characterName: Pidgy
   problem: "I want to get into a liquor store, but I\u2019m underage. Make me look
     like an adult??"
-  baseImage: {fileID: 0}
+  successDialog: 
+  failDialog: 
+  baseImage: {fileID: 21300000, guid: 802d3ba2a90693747830872cdc6a086b, type: 3}
   impactSuccessThreshold: 5
-  coverOptionImpacts: []
+  coverOptionImpacts:
+  - coverOption: {fileID: 11400000, guid: 4f4a005361579784abc702d742d65e65, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: f0c874042a05ead41b3de59c49ecedfe, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: 8fc55bbc6c2173c4b91c938615af84e0, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: aa3dc45c036d5dd47aaf8f17fddde7bf, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: b1df0c61b8eaf0a44865fdf54b3045ae, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: a06891e291d265e43892379e9788db4a, type: 2}
+    impactAmount: 1

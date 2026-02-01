@@ -43,6 +43,7 @@ public class GameUI : MonoBehaviour
     private void OnCharacterDone(CharacterDone characterDone)
     {
         leftSideUI.ClearCharacter();
+        boxUI.OnCharacterDone(characterDone);
     }
 
     private void OnCharacterChanged(CharacterData characterData)

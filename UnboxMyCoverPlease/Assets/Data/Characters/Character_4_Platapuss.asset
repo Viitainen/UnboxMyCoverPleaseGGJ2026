@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterName: Platapuss
   problem: I want to rob the Louvre and get away with it. Help me blend in?
-  baseImage: {fileID: 0}
+  successDialog: 
+  failDialog: 
+  baseImage: {fileID: 21300000, guid: 46f331f89d283884fad236ec4a71f822, type: 3}
   impactSuccessThreshold: 5
-  coverOptionImpacts: []
+  coverOptionImpacts:
+  - coverOption: {fileID: 11400000, guid: f0c874042a05ead41b3de59c49ecedfe, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 151891b031a68d54da2d310505d01c45, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: aa3dc45c036d5dd47aaf8f17fddde7bf, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 5d705e5876e429a4898e5972197add5f, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: a06891e291d265e43892379e9788db4a, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 253c5e04a1642434286a70b10bd64401, type: 2}
+    impactAmount: 1

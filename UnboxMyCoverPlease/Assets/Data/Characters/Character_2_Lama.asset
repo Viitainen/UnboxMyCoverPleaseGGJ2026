@@ -15,6 +15,20 @@ MonoBehaviour:
   characterName: Lama
   problem: "Someone follows me every night\u2026 it scares me. How can I protect
     myself?"
-  baseImage: {fileID: 0}
+  successDialog: 
+  failDialog: 
+  baseImage: {fileID: 21300000, guid: dba530b6accefc24fb4484c27ef6c001, type: 3}
   impactSuccessThreshold: 5
-  coverOptionImpacts: []
+  coverOptionImpacts:
+  - coverOption: {fileID: 11400000, guid: 72f9b1fa192b49649b25544eced87556, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 4f4a005361579784abc702d742d65e65, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: b416fa30b1691064ea8eb8e2582e9a81, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 8fc55bbc6c2173c4b91c938615af84e0, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: 6bf3fb165f1239e4099bfedbe29c754c, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: b1df0c61b8eaf0a44865fdf54b3045ae, type: 2}
+    impactAmount: 1

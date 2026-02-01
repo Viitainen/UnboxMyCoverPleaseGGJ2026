@@ -15,6 +15,20 @@ MonoBehaviour:
   characterName: 
   problem: "We\u2019re rising up against the cruel headmaster at our orphanage. I
     need more courage."
-  baseImage: {fileID: 0}
+  successDialog: 
+  failDialog: 
+  baseImage: {fileID: 21300000, guid: 063c9192f18ae7240a2162638ac6be40, type: 3}
   impactSuccessThreshold: 5
-  coverOptionImpacts: []
+  coverOptionImpacts:
+  - coverOption: {fileID: 11400000, guid: 929797829e01e86488382c645c74d0bd, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 72f9b1fa192b49649b25544eced87556, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: b363964920268064687b1d59702bb5c3, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: b416fa30b1691064ea8eb8e2582e9a81, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: 253c5e04a1642434286a70b10bd64401, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 6b536ae58d63cfe419ff621ed754c406, type: 2}
+    impactAmount: 1

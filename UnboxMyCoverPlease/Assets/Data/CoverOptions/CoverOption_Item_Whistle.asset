@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CoverOption_Item_Whistle
   m_EditorClassIdentifier: Assembly-CSharp::CoverOptionData
   optionName: Whistle
-  description: Call for help
+  description: Whistle for help
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: 0fcbb7f90e5d519418c5b8010c8a1a74, type: 3}

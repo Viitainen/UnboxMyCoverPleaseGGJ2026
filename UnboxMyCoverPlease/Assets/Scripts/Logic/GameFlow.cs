@@ -10,6 +10,8 @@ public class GameFlow : MonoBehaviour
 
     public Action<CharacterDone> OnCharacterDone;
 
+    public Action OnAllCharactersDone;
+
     private int currentCharacterIndex = -1;
 
     private CharacterData currentCharacter;
@@ -64,17 +66,20 @@ public class GameFlow : MonoBehaviour
 
     public CharacterData AdvanceToNextCharacter(out bool hadCharacter)
     {
-        if (!currentCharacter || !currentHeadwearOption || !currentItemOption || !currentInstructionOption)
+        if (currentCharacter)
         {
-            hadCharacter = false;
-            return null;
+            if (!currentHeadwearOption || !currentItemOption || !currentInstructionOption)
+            {
+                hadCharacter = false;
+                return null;
+            }
         }
 
         SaveCurrentCharacterAsDone();
 
-        currentHeadwearOption = null;
-        currentItemOption = null;
-        currentInstructionOption = null;
+        ChangeHeadwearOption(null);
+        ChangeItemOption(null);
+        ChangeInstructionOption(null);
 
         currentCharacterIndex++;
         hadCharacter = currentCharacterIndex < characters.Count;
@@ -87,6 +92,8 @@ public class GameFlow : MonoBehaviour
         else
         {
             currentCharacter = null;
+            // Go to end results?
+            OnAllCharactersDone?.Invoke();
         }
 
         OnCharacterChanged?.Invoke(currentCharacter);
@@ -104,6 +111,11 @@ public class GameFlow : MonoBehaviour
             characterDone.itemSelection = currentItemOption;
             characterDone.instructionSelection = currentInstructionOption;
 
+            CoverOptionsResults results = currentCharacter.GetCoverOptionsResults(characterDone.GetCoverOptions);
+
+            characterDone.results = results;
+
+            OnCharacterDone?.Invoke(characterDone);
             characterDones.Add(characterDone);
 
             return true;

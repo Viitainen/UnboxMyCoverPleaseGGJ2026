@@ -39,6 +39,18 @@ public class BoxUI : MonoBehaviour
         gameFlow.ChangeInstructionOption(data);
     }
 
+    public void OnCharacterDone(CharacterDone characterDone)
+    {
+
+        boxHeadwearUI.DeselectSelected();
+        boxItemsUI.DeselectSelected();
+        boxInstructionsUI.DeselectSelected();
+
+        boxHeadwearUI.RemoveCoverOption(characterDone.headwearSelection);
+        boxItemsUI.RemoveCoverOption(characterDone.itemSelection);
+        boxInstructionsUI.RemoveCoverOption(characterDone.instructionSelection);
+    }
+
 
 
 

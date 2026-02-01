@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: ID card
   description: Looks like a beliveable ID
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: 640ae6c1b44ef6a49bfc4e9e2377669b, type: 3}

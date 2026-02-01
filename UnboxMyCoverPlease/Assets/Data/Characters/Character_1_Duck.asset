@@ -15,6 +15,20 @@ MonoBehaviour:
   characterName: Duck
   problem: I have superpowers, and I want to use them secretly for good. Maybe something
     to help me be a hero?
-  baseImage: {fileID: 0}
+  successDialog: 
+  failDialog: 
+  baseImage: {fileID: 21300000, guid: 6f439507aaaa1b246908b0d037b2c8be, type: 3}
   impactSuccessThreshold: 5
-  coverOptionImpacts: []
+  coverOptionImpacts:
+  - coverOption: {fileID: 11400000, guid: 151891b031a68d54da2d310505d01c45, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 929797829e01e86488382c645c74d0bd, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: 5d705e5876e429a4898e5972197add5f, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: b363964920268064687b1d59702bb5c3, type: 2}
+    impactAmount: 1
+  - coverOption: {fileID: 11400000, guid: 6b536ae58d63cfe419ff621ed754c406, type: 2}
+    impactAmount: 2
+  - coverOption: {fileID: 11400000, guid: 6bf3fb165f1239e4099bfedbe29c754c, type: 2}
+    impactAmount: 1

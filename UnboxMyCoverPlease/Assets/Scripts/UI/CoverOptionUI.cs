@@ -24,9 +24,10 @@ public class CoverOptionUI : MonoBehaviour
         }
     }
 
-    public void Start()
+    public virtual void Start()
     {
         optionButton.onClick.AddListener(OnButtonClicked);
+        UpdateUI();
     }
 
     private void OnButtonClicked()
@@ -37,6 +38,11 @@ public class CoverOptionUI : MonoBehaviour
     public virtual void ToggleUsable(bool isUsable, bool animate)
     {
         optionButton.interactable = isUsable;
+    }
+
+    public virtual void ToggleSelected(bool isSelected)
+    {
+        
     }
 
     public virtual void UpdateUI()

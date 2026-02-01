@@ -9,6 +9,7 @@ public abstract class BoxContentUI : MonoBehaviour
 
     public Action<CoverOptionUI, CoverOptionData> OnOptionSelected;
 
+    private CoverOptionUI selectedCoverOptionUI;
 
     public void Start()
     {
@@ -25,6 +26,17 @@ public abstract class BoxContentUI : MonoBehaviour
 
     private void OnOptionSelectedHandler(CoverOptionUI coverOptionUI, CoverOptionData coverOptionData)
     {
+        if (selectedCoverOptionUI != coverOptionUI)
+        {
+            if (selectedCoverOptionUI)
+            {
+                selectedCoverOptionUI.ToggleSelected(false);
+            }
+        }
+
+        selectedCoverOptionUI = coverOptionUI;
+        selectedCoverOptionUI.ToggleSelected(true);
+
         OnOptionSelected?.Invoke(coverOptionUI, coverOptionData);
     }
 
@@ -44,6 +56,14 @@ public abstract class BoxContentUI : MonoBehaviour
         foreach (CoverOptionUI coverOptionUI in coverOptionUIs)
         {
             coverOptionUI.ToggleUsable(isVisible, animate);
+        }
+    }
+
+    public void DeselectSelected()
+    {
+        if (selectedCoverOptionUI)
+        {
+            selectedCoverOptionUI.ToggleSelected(false);
         }
     }
 }

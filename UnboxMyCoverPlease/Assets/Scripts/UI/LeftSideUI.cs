@@ -10,8 +10,8 @@ public class LeftSideUI : MonoBehaviour
 
     public void ShowCharacter(CharacterData characterData)
     {
-        characterUI.ChangeBaseImage(characterData.baseImage);
-        dialogUI.ShowDialog(characterData.problem);
+        characterUI.ChangeBaseImage(characterData ? characterData.baseImage : null);
+        dialogUI.ShowDialog(characterData ? characterData.problem : "");
     }
 
     public void ClearCharacter()

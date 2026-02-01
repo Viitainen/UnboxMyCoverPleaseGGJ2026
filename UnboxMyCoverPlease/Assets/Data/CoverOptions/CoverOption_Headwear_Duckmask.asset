@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: Duckmask
   description: Ducks are usually brave
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: d38bc8cddf95b2043870b7e1d4957825, type: 3}

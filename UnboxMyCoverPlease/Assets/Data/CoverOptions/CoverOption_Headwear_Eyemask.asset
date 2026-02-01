@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: Eyemask
   description: To cover identity
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: 995c54959dcb5f54181e5e522e4e4cc2, type: 3}

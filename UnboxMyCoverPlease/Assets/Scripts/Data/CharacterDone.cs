@@ -12,6 +12,8 @@ public class CharacterDone
 
     public CoverOptionData instructionSelection;
 
+    public CoverOptionsResults results;
+
     public List<CoverOptionData> GetCoverOptions
     {
         get
@@ -19,4 +21,13 @@ public class CharacterDone
             return new List<CoverOptionData>() { headwearSelection, itemSelection, instructionSelection };
         }
     }
+
+    public string GetEndDialog
+    {
+        get
+        {
+            return results.success ? character.successDialog : character.failDialog;
+        }
+    }
+
 }

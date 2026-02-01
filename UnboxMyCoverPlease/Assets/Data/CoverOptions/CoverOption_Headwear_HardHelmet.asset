@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: Hard hat
   description: Looking like an honest worker
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: ec52eb768ea0dcc47a9bb359b22e8be1, type: 3}

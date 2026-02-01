@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: Car keys
   description: Drive a car or stab someone maybe?
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: bdc02861dd357ca41a78de7b7b1a2106, type: 3}

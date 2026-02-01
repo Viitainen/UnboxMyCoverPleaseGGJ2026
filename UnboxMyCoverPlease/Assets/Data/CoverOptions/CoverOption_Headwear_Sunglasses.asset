@@ -15,4 +15,4 @@ MonoBehaviour:
   optionName: Sunglasses
   description: Mask fear and look cool
   optionIcon: {fileID: 0}
-  optionAvatarImage: {fileID: 0}
+  optionAvatarImage: {fileID: 21300000, guid: 004a1942baba012459d142a6159fda6b, type: 3}
