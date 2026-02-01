@@ -15,8 +15,10 @@ MonoBehaviour:
   characterName: 
   problem: "We\u2019re rising up against the cruel headmaster at our orphanage. I
     need more courage."
-  successDialog: 
-  failDialog: 
+  successDialog: We did it! We stood together! The new headmaster promised to give
+    us beds to sleep in and cotton candy!
+  failDialog: "Things didn\u2019t work out\u2026 When I started to riot, no one joined
+    me. Now I live on the streets. I actually miss the orphanage\u2026 I had a roof\u2026"
   baseImage: {fileID: 21300000, guid: 063c9192f18ae7240a2162638ac6be40, type: 3}
   impactSuccessThreshold: 5
   coverOptionImpacts:

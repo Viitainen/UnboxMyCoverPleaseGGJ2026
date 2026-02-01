@@ -15,8 +15,10 @@ MonoBehaviour:
   characterName: Duck
   problem: I have superpowers, and I want to use them secretly for good. Maybe something
     to help me be a hero?
-  successDialog: 
-  failDialog: 
+  successDialog: "This is awesome, thanks for helping me! They call me the \u201CDuckman\u201D,
+    the new superhero of our century!"
+  failDialog: "I am a superhero\u2026 but my identity is no secret. People follow
+    me and demand more from me\u2026 why am I even trying?"
   baseImage: {fileID: 21300000, guid: 6f439507aaaa1b246908b0d037b2c8be, type: 3}
   impactSuccessThreshold: 5
   coverOptionImpacts:

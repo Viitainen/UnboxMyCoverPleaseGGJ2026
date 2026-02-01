@@ -15,8 +15,10 @@ MonoBehaviour:
   characterName: Pidgy
   problem: "I want to get into a liquor store, but I\u2019m underage. Make me look
     like an adult??"
-  successDialog: 
-  failDialog: 
+  successDialog: I got into the liquor store!! I was so excited that I forgot to
+    buy any alcohol, but next time I will prevail! Thanks for being a bad influence!
+  failDialog: "They saw right through my disguise and called my parents. I\u2019m
+    filled with shame. All my friends know that I failed."
   baseImage: {fileID: 21300000, guid: 802d3ba2a90693747830872cdc6a086b, type: 3}
   impactSuccessThreshold: 5
   coverOptionImpacts:

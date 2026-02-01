@@ -15,8 +15,10 @@ MonoBehaviour:
   characterName: Lama
   problem: "Someone follows me every night\u2026 it scares me. How can I protect
     myself?"
-  successDialog: 
-  failDialog: 
+  successDialog: When I heard the steps behind me, I turned and there was nobody
+    there! It was just my imagination. Thanks for helping me find my bravery!
+  failDialog: "The steps\u2026 they follow me everywhere\u2026 I fear for my life.
+    Nothing helps. No one helps\u2026. I must disappear\u2026 Goodbye. Forever."
   baseImage: {fileID: 21300000, guid: dba530b6accefc24fb4484c27ef6c001, type: 3}
   impactSuccessThreshold: 5
   coverOptionImpacts:
