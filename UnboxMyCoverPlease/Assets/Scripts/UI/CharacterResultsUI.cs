@@ -63,7 +63,7 @@ public class CharacterResultsUI : MonoBehaviour
 
                 if (audioClip)
                 {
-                    audioManager.PlayEffect(audioClip);
+                    audioManager.PlayEffect(audioClip, 0.4f);
                 }
             });
         }

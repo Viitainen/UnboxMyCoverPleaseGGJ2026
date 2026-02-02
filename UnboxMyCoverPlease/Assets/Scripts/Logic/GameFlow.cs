@@ -106,6 +106,7 @@ public class GameFlow : MonoBehaviour
         }
         else
         {
+            currentCharacterIndex--;
             InitiateResults();
         }
 
@@ -168,7 +169,6 @@ public class GameFlow : MonoBehaviour
     {
         // currentCharacter = null;
         // Go to end results?
-        currentCharacterIndex = -1;
         OnAllCharactersDone?.Invoke();
 
         if (audioManager)
@@ -178,6 +178,7 @@ public class GameFlow : MonoBehaviour
 
         DOVirtual.DelayedCall(1.04f, () =>
         {
+            currentCharacterIndex = -1;
             AdvanceToNextResult(out _);
         });
     }
