@@ -56,7 +56,7 @@ public class CharacterResultsUI : MonoBehaviour
 
         if (audioManager && characterDone != null)
         {
-            DOVirtual.DelayedCall(1f, () =>
+            DOVirtual.DelayedCall(1.75f, () =>
             {
 
                 AudioClip audioClip = characterDone.results.success ? successAudioClip : failAudioClip;

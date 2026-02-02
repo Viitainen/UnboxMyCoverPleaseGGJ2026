@@ -71,11 +71,8 @@ public class UIManager : MonoBehaviour
         // Fade to black
         fader.FadeOut(fadeOutDuration);
         yield return new WaitForSecondsRealtime(fadeOutDuration);
-
-        // Switch UI
-        // ???
-
-        yield return new WaitForSecondsRealtime(5f);
+        
+        yield return new WaitForSecondsRealtime(2f);
 
         // End screen?
         CustomSceneManager.Instance.LoadMainMenuScene();

@@ -216,7 +216,7 @@ MonoBehaviour:
   optionText: {fileID: 5120567270712118551}
   borderImage: {fileID: 4727056162603627066}
   normalBorderColor: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
-  selectedBorderColor: {r: 0.12971698, g: 0.5188679, b: 0.15711848, a: 1}
+  selectedBorderColor: {r: 0.6431373, g: 0.9176471, b: 0.54509807, a: 1}
   selectedObject: {fileID: 0}
 --- !u!1 &8904321467878735571
 GameObject:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 38
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
