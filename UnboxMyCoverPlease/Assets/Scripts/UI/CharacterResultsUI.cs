@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,15 @@ public class CharacterResultsUI : MonoBehaviour
 
     [SerializeField]
     private DialogUI dialogUI;
+
+    [SerializeField]
+    private AudioManager audioManager;
+
+    [SerializeField]
+    private AudioClip successAudioClip;
+
+    [SerializeField]
+    private AudioClip failAudioClip;
 
     [SerializeField]
     private Button nextResultButton;
@@ -43,5 +53,20 @@ public class CharacterResultsUI : MonoBehaviour
         string endDialog = characterDone != null ? characterDone.GetEndDialog : "";
 
         dialogUI.ShowDialog(endDialog);
+
+        if (audioManager && characterDone != null)
+        {
+            DOVirtual.DelayedCall(1f, () =>
+            {
+
+                AudioClip audioClip = characterDone.results.success ? successAudioClip : failAudioClip;
+
+                if (audioClip)
+                {
+                    audioManager.PlayEffect(audioClip);
+                }
+            });
+        }
+
     }
 }

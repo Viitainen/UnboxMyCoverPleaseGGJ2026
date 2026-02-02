@@ -3517,6 +3517,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterResultsUI
   gameFlow: {fileID: 264847835}
   dialogUI: {fileID: 1658299178}
+  audioManager: {fileID: 99449224}
+  successAudioClip: {fileID: 8300000, guid: 0d94a233ef59b874993aa11e980e8ec9, type: 3}
+  failAudioClip: {fileID: 8300000, guid: c6adbfbdbc2ed9a419f4d81906b76317, type: 3}
   nextResultButton: {fileID: 4640550491539978201}
 --- !u!1 &1120867813
 GameObject:
